@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    />
+    <style>
+      .width-margin {
+      width:500px;
+      margin: 0 auto;
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+
+    .mx-0 {
+      margin: 0;
+    }
+
+  .hover-underline-animation {
+    /* color: ; */
+    display: inline-block;
+    /* position: relative; */
+}
+.hover-underline-animation:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  /* transition: transform 0.25s ease-out; */
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.hover-underline-animation:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.hover-underline-animation-black:after {
+  background-color: rgb(96 165 250);
+  /* width: min-content; */
+}
+    </style>
+  </head>
+  <body>
+    <section class="border border-black width-margin shadow-lg rounded-lg relative">
+      <div class="">
+        <!-- <div> -->
+          <div class="h-auto w-full border-2 rounded">
+            <!-- <p class="text-center"> -->
+              <img style="height: 6.5rem; width: 6.5rem; transform: translate(-50%, -50%);" class="absolute right-1/2 left-1/2 " src="My project-1 (1).jpg" alt="user">
+              
+            <!-- </p> -->
+            <div class="mx-12 mt-20 mb-4">
+              <p class="font-bold text-4xl text-center">Sign up</p>
+  
+            </div>
+            
+      <form class="flex flex-col px-12 pb-6 pt-6 gap-2" action="sign_up.php" method="POST">
+        <div class="flex flex-col gap-6 justify-between mx-auto w-auto mb-0">
+        <div class="flex flex-row justify-between">
+          <label for="" class="mr-4 my-auto">
+            FULL NAME
+          </label>
+          <input class="border border-black rounded py-2 px-4 hover:shadow-xl active:shadow-xl focus:shadow-xl" name="username" type="text" placeholder="Jane Doe">
+        </div>
+        <div class="flex flex-row justify-between">
+          <label for="" class="mr-4 my-auto">
+            EMAIL-ID
+          </label>
+          <input class="border border-black rounded py-2 px-4 hover:shadow-xl active:shadow-xl focus:shadow-xl" name="email" type="text" placeholder="me@example.com">
+        </div>
+        <div class="flex flex-row space-between w-full gap-12">
+          <label for="" class="mr-4 my-auto ">
+            Password
+          </label>
+          <input class="border border-black rounded py-2 px-4 hover:shadow-xl active:shadow-xl focus:shadow-xl" name="password" type="password" placeholder="*****">
+        </div>
+      </div>
+        <div class="my-4 text-center text-base">
+          <input type="checkbox" id="remember_me" name="remember_me" value="Y/N">
+          <label for="remember_me">Remember me</label>
+        </div>
+        <input class="px-4 py-4 bg-black text-white hover:bg-white hover:text-black font-bold duration-300 hover:border hover:border-black border-2 rounded-lg w-fit" value="Sign up" name="submit" type="submit">
+        <div style="border: 2px solid #000" class="w-fit mt-6 rounded h-fit text-center px-12 py-2 flex flex-row justify-strech items-center justify-center hover:shadow-xl">
+          <p class="text-center">
+            <img class="mx-0" src="https://www.transparentpng.com/thumb/google-logo/colorful-google-logo-transparent-clipart-download-u3DWLj.png" height="32px" width="32px" alt="google_no_background">
+            <p class="text-center px-2 text-base">Sign up with Google</p>
+          </p>
+          
+        </div>
+        <div class="text-center mt-1">
+          <p>Already have an account?</p>
+          <a class="hover-underline-animation hover-underline-animation-black text-center text-blue-400" href="#">Sign up</a>
+        </div>
+      </form>
+      <!-- <div><p class="bg-[#e9e516]"  >lope</p></div> -->
+    </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
